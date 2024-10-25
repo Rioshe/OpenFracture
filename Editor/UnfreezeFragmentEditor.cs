@@ -1,8 +1,11 @@
 using UnityEditor;
 
-[CustomEditor(typeof(UnfreezeFragment))]
-[CanEditMultipleObjects]
-public class UnfreezeFragmentEditor : Editor
+namespace OpenFracture.Editor
 {
-    // Empty editor required for custom property drawers to work properly
+    [CustomEditor(typeof(UnfreezeFragment))]
+    [CanEditMultipleObjects]
+    public class UnfreezeFragmentEditor : UnityEditor.Editor
+    {
+        // Empty editor required for custom property drawers to work properly
+    }
 }
