@@ -11,12 +11,12 @@ public class Slice : MonoBehaviour
     /// <summary>
     /// The number of times this fragment has been re-sliced.
     /// </summary>
-    private int currentSliceCount;
+    protected int currentSliceCount;
 
     /// <summary>
     /// Collector object that stores the produced fragments
     /// </summary>
-    private GameObject fragmentRoot;
+    protected GameObject fragmentRoot;
 
     /// <summary>
     /// Slices the attached mesh along the cut plane
@@ -121,7 +121,7 @@ public class Slice : MonoBehaviour
     /// Convenience method for copying this component to another component
     /// </summary>
     /// <param name="obj">The GameObject to copy this component to</param>
-    private void CopySliceComponent(GameObject obj)
+    protected virtual void CopySliceComponent(GameObject obj)
     {
         var sliceComponent = obj.AddComponent<Slice>();
 
